@@ -2,7 +2,7 @@
 
 set -e
 
-apk add --update py3-pip tar git unzip wget gzip curl make openssl groff
+apk add --update py3-pip curl make openssl groff
 
 # install kubectl
 # https://aur.archlinux.org/packages/kubectl-bin/
@@ -25,9 +25,9 @@ chmod +x ./aws-iam-authenticator
 mv aws-iam-authenticator /usr/local/bin/aws-iam-authenticator
 aws-iam-authenticator help
 # install terraform
-curl -o /tmp/terraform.zip -LO https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_linux_amd64.zip
-unzip /tmp/terraform.zip
-chmod +x terraform && mv terraform /usr/local/bin/
+#curl -o /tmp/terraform.zip -LO https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_linux_amd64.zip
+#unzip /tmp/terraform.zip
+#chmod +x terraform && mv terraform /usr/local/bin/
 # install YAML tools
 pip install yamllint yq
 
