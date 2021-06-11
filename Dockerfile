@@ -41,7 +41,7 @@ RUN apk --no-cache add \
     && rm glibc-${GLIBC_VER}.apk \
     && rm glibc-bin-${GLIBC_VER}.apk \
     && rm -rf /var/cache/apk/*
-
+RUN mkdir /opt
 COPY install.sh /opt/install.sh
 RUN /opt/install.sh
 
