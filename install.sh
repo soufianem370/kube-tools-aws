@@ -2,7 +2,7 @@
 
 set -e
 
-apk add --update py3-pip curl make openssl groff
+apk add --update py3-pip tar git unzip wget gzip curl make openssl groff
 
 # install kubectl
 # https://aur.archlinux.org/packages/kubectl-bin/
