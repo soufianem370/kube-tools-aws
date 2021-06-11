@@ -24,7 +24,10 @@ openssl sha1 -sha256 aws-iam-authenticator
 chmod +x ./aws-iam-authenticator
 mv aws-iam-authenticator /usr/local/bin/aws-iam-authenticator
 aws-iam-authenticator help
-
+# install terraform
+curl -o /tmp/terraform.zip -LO https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_linux_amd64.zip
+unzip /tmp/terraform.zip
+chmod +x terraform && mv terraform /usr/local/bin/
 # install YAML tools
 pip install yamllint yq
 
