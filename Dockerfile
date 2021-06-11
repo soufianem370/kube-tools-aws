@@ -43,6 +43,7 @@ RUN apk --no-cache add \
     && rm -rf /var/cache/apk/*
 RUN mkdir /opt
 COPY install.sh /opt/install.sh
+RUN chmod -R 777 /opt/install.sh
 RUN /opt/install.sh
 
 CMD bash
